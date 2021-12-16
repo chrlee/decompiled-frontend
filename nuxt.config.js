@@ -38,7 +38,15 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://strapi.nuxtjs.org/
+    '@nuxtjs/strapi',
   ],
+
+  // Strapi module configuration: https://strapi.nuxtjs.org/
+  strapi: {
+    entities: [],
+    url: process.env.STRAPI_URL || 'http://locahost:1337'
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
