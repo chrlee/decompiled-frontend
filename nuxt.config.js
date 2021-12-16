@@ -44,7 +44,7 @@ export default {
 
   // Strapi module configuration: https://strapi.nuxtjs.org/
   strapi: {
-    entities: [],
+    entities: ['pages', 'projects'],
     url: process.env.STRAPI_URL || 'http://locahost:1337'
   },
 
