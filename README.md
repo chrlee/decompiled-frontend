@@ -1,4 +1,5 @@
 # decompiled-frontend
+[![Netlify Status](https://api.netlify.com/api/v1/badges/901239ed-7fb1-4a48-ac24-1fa2c9caaa5e/deploy-status)](https://app.netlify.com/sites/decompiled/deploys)
 
 ## Build Setup
 
