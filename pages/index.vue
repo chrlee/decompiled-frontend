@@ -1,5 +1,5 @@
 <template>
-    <div class="text-gray-400 whitespace-pre-line leading-tight">
+    <div class="text-gray-400 whitespace-pre-line leading-tight inline-block m-4 px-2 border-green-500 border-l-2">
         <p>&lt;!DOCTYPE html&gt;</p>
         <p>&lt;html&gt;</p>
         <div class="ml-4">
@@ -45,12 +45,23 @@
                                                     <div class="ml-4">
                                                         <span v-for="page in pages" :key="page.id">
                                                             <p>&lt;li class="menu__list-item"&gt;</p>
-                                                                <div class="ml-4">
-                                                                    <p>&lt;<span class="text-indigo-400">a</span> <span class="text-blue-400">class</span>=<span class="text-yellow-500 opacity-70">"menu__list-item-link"</span> <span class="text-blue-400">href</span>=<span class="text-yellow-500 opacity-70">"{{ page.attributes.href }}"</span>&gt;</p>
-                                                                        <div class="ml-4">
-                                                                            <p class="text-black">{{ page.attributes.Title }}</p>
-                                                                        </div>
-                                                                    <p>&lt;/<span class="text-indigo-400">a</span>&gt;</p>
+                                                                <div v-if="page.attributes.external" class="ml-4">
+                                                                    <a :href="page.attributes.href">
+                                                                        <p>&lt;<span class="text-indigo-400">a</span> <span class="text-blue-400">class</span>=<span class="text-yellow-500 opacity-70">"menu__list-item-link"</span> <span class="text-blue-400">href</span>=<span class="text-yellow-500 opacity-70">"{{ page.attributes.href }}"</span>&gt;</p>
+                                                                            <div class="ml-4">
+                                                                                <p class="text-black">{{ page.attributes.Title }}</p>
+                                                                            </div>
+                                                                        <p>&lt;/<span class="text-indigo-400">a</span>&gt;</p>
+                                                                    </a>
+                                                                </div>
+                                                                <div v-else class="ml-4">
+                                                                    <NuxtLink :to="page.attributes.href">
+                                                                        <p>&lt;<span class="text-indigo-400">a</span> <span class="text-blue-400">class</span>=<span class="text-yellow-500 opacity-70">"menu__list-item-link"</span> <span class="text-blue-400">href</span>=<span class="text-yellow-500 opacity-70">"{{ page.attributes.href }}"</span>&gt;</p>
+                                                                            <div class="ml-4">
+                                                                                <p class="text-black">{{ page.attributes.Title }}</p>
+                                                                            </div>
+                                                                        <p>&lt;/<span class="text-indigo-400">a</span>&gt;</p>
+                                                                    </NuxtLink>
                                                                 </div>
                                                             <p>&lt;/li&gt;</p>
                                                         </span>
@@ -92,14 +103,12 @@ export default {
     async asyncData (context) {
         const pageData = await context.$strapi.find('pages', { sort: 'id' });
         return {
-            pages: pageData.data,
-            error: null
+            pages: pageData.data
         }
     },
     data () {
         return {
-            pages: [],
-            error: null
+            pages: []
         }
     },
 }
