@@ -19,63 +19,95 @@
             </div>
             <p>&lt;/head&gt;</p>
             <p>&lt;body&gt;</p>
+            <div class="ml-4">
+                <p>&lt;div id="layout"&gt;</p>
                 <div class="ml-4">
-                    <p>&lt;div id="layout"&gt;</p>
+                    <p>&lt;div class="navigation"&gt;</p>
+                    <div class="ml-4">
+                        <p>&lt;div class="navigation__inner"&gt;</p>
                         <div class="ml-4">
-                            <p>&lt;div class="navigation"&gt;</p>
+                            <p>&lt;div class="navigation__header"&gt;</p>
                             <div class="ml-4">
-                               <p>&lt;div class="navigation__inner"&gt;</p>
+                                <p>&lt;div&gt;</p>
+                                <div class="ml-4">
+                                    <p>&lt;h2 class="navigation__header-title"&gt;</p>
                                     <div class="ml-4">
-                                        <p>&lt;div class="navigation__header"&gt;</p>
-                                            <div class="ml-4">
-                                                <p>&lt;div&gt;</p>
-                                                    <div class="ml-4">
-                                                        <p>&lt;h2 class="navigation__header-title"&gt;</p>
-                                                            <div class="ml-4">
-                                                                <p>&lt;a aria-current="page" class="navigation__header-title-link" href="/"&gt;Home&lt;/div&gt;</p> 
-                                                            </div>
-                                                        <p>&lt;/div&gt;</p> 
-                                                    </div>
-                                                <p>&lt;/div&gt;</p> 
-                                            </div>
-                                        <p>&lt;/div&gt;</p>
-                                        <p>&lt;nav class="menu"&gt;</p>
-                                            <div class="ml-4">
-                                                <p>&lt;ul class="menu__list"&gt;</p>
-                                                    <div class="ml-4">
-                                                        <span v-for="page in pages" :key="page.id">
-                                                            <p>&lt;li class="menu__list-item"&gt;</p>
-                                                                <div v-if="page.attributes.external" class="ml-4">
-                                                                    <a :href="page.attributes.href">
-                                                                        <p>&lt;<span class="text-indigo-400">a</span> <span class="text-blue-400">class</span>=<span class="text-yellow-500 opacity-70">"menu__list-item-link"</span> <span class="text-blue-400">href</span>=<span class="text-yellow-500 opacity-70">"{{ page.attributes.href }}"</span>&gt;</p>
-                                                                            <div class="ml-4">
-                                                                                <p class="text-black">{{ page.attributes.Title }}</p>
-                                                                            </div>
-                                                                        <p>&lt;/<span class="text-indigo-400">a</span>&gt;</p>
-                                                                    </a>
-                                                                </div>
-                                                                <div v-else class="ml-4">
-                                                                    <NuxtLink :to="page.attributes.href">
-                                                                        <p>&lt;<span class="text-indigo-400">a</span> <span class="text-blue-400">class</span>=<span class="text-yellow-500 opacity-70">"menu__list-item-link"</span> <span class="text-blue-400">href</span>=<span class="text-yellow-500 opacity-70">"{{ page.attributes.href }}"</span>&gt;</p>
-                                                                            <div class="ml-4">
-                                                                                <p class="text-black">{{ page.attributes.Title }}</p>
-                                                                            </div>
-                                                                        <p>&lt;/<span class="text-indigo-400">a</span>&gt;</p>
-                                                                    </NuxtLink>
-                                                                </div>
-                                                            <p>&lt;/li&gt;</p>
-                                                        </span>
-                                                    </div>
-                                                <p>&lt;/ul&gt;</p>
-                                            </div>
-                                        <p>&lt;/nav&gt;</p>
+                                        <p>&lt;a aria-current="page" class="navigation__header-title-link" href="/"&gt;Home&lt;/a&gt;</p> 
                                     </div>
-                               <p>&lt;/div&gt;</p> 
+                                    <p>&lt;/h2&gt;</p> 
+                                </div>
+                                <p>&lt;/div&gt;</p> 
                             </div>
                             <p>&lt;/div&gt;</p>
+                            <p>&lt;nav class="menu"&gt;</p>
+                            <div class="ml-4">
+                                <p>&lt;ul class="menu__list"&gt;</p>
+                                <div class="ml-4">
+                                    <span v-for="page in pages" :key="page.id">
+                                        <p>&lt;li class="menu__list-item"&gt;</p>
+                                        <div v-if="page.attributes.external" class="ml-4">
+                                            <a :href="page.attributes.href">
+                                                <p>&lt;<span class="text-indigo-400">a</span> <span class="text-blue-400">class</span>=<span class="text-yellow-500 opacity-70">"menu__list-item-link"</span> <span class="text-blue-400">href</span>=<span class="text-yellow-500 opacity-70">"{{ page.attributes.href }}"</span>&gt;</p>
+                                                <div class="ml-4">
+                                                    <p class="text-black">{{ page.attributes.Title }}</p>
+                                                </div>
+                                                <p>&lt;/<span class="text-indigo-400">a</span>&gt;</p>
+                                            </a>
+                                        </div>
+                                        <div v-else class="ml-4">
+                                            <NuxtLink :to="page.attributes.href">
+                                                <p>&lt;<span class="text-indigo-400">a</span> <span class="text-blue-400">class</span>=<span class="text-yellow-500 opacity-70">"menu__list-item-link"</span> <span class="text-blue-400">href</span>=<span class="text-yellow-500 opacity-70">"{{ page.attributes.href }}"</span>&gt;</p>
+                                                <div class="ml-4">
+                                                    <p class="text-black">{{ page.attributes.Title }}</p>
+                                                </div>
+                                                <p>&lt;/<span class="text-indigo-400">a</span>&gt;</p>
+                                            </NuxtLink>
+                                        </div>
+                                        <p>&lt;/li&gt;</p>
+                                    </span>
+                                </div>
+                                <p>&lt;/ul&gt;</p>
+                            </div>
+                            <p>&lt;/nav&gt;</p>
                         </div>
+                        <p>&lt;/div&gt;</p> 
+                    </div>
                     <p>&lt;/div&gt;</p>
+                    <p>&lt;div class="content"&gt;</p>
+                    <div class="ml-4">
+                        <p>&lt;div class="content__inner"&gt;</p>
+                        <div class="ml-4">
+                            <p>&lt;div class="page"&gt;</p>
+                            <div class="ml-4">
+                                <p>&lt;div class="page_body"&gt;</p>
+                                <div class="ml-4">
+
+                                </div>
+                                <p>&lt;/div&gt;</p> 
+                            </div>
+                            <p>&lt;/div&gt;</p> 
+                        </div>
+                        <p>&lt;/div&gt;</p> 
+                    </div>
+                    <p>&lt;/div&gt;</p> 
                 </div>
+                <p>&lt;/div&gt;</p>
+            </div>
+            <p>&lt;script id="gatsby-script-loader"&gt;</p>
+            <div class="ml-4">
+                <p>/*&lt;![CDATA[*/</p>
+                <div class="ml-4">
+                    <p>window.pagePath = "/";</p>
+                </div>
+                <p>/*]]&gt;*/</p>
+            </div>
+            <p>&lt;/script&gt;
+                &lt;script src="/component---src-pages-index-jsx-6cc8c09ba2dd3d4fee67.js" async=""/&gt;
+                &lt;script src="/styles-2784bacaa009e3e009ba.js" async=""/&gt;
+                &lt;script src="/app-479a1b9c4c888e48f6fb.js" async=""/&gt;
+                &lt;script src="/framework-f7a21432b9f0980fadac.js" async=""/&gt;
+                &lt;script src="/webpackruntime-1ff73fa22fa37b2d2a6e.js" async=""/&gt;
+            </p>
             <p>&lt;/body&gt;</p>
         </div>
         <p>&lt;/html&gt;</p>
