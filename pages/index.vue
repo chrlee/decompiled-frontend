@@ -1,5 +1,7 @@
 <template>
-    <div class="text-gray-400 whitespace-pre-line leading-tight inline-block m-4 px-2 border-green-500 border-l-2">
+    <client-only>
+    <transition-group appear name="fade">
+    <div key="wrapper" class="text-gray-400 whitespace-pre-line leading-tight inline-block m-4 px-2 border-green-500 border-l-2">
         <p>&lt;!DOCTYPE html&gt;</p>
         <p>&lt;html&gt;</p>
         <div class="ml-4">
@@ -112,6 +114,8 @@
         </div>
         <p>&lt;/html&gt;</p>
     </div>
+    </transition-group>
+    </client-only>
 </template>
 
 <!--
@@ -145,3 +149,12 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+</style>
