@@ -26,7 +26,7 @@
 <script>
 export default {
     name: 'ImageMap',
-    components: { Globe: () => {if(process.browser){return import("../notComponents/Globe.vue")}} },
+    components: { Globe: () => {if(process.browser){return import("../clientComponents/Globe.vue")}} },
     async asyncData (context) {
         const pageData = await context.$strapi.find('pages', { sort: 'id' });
         return {
