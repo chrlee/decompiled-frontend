@@ -6,13 +6,13 @@
 <script>
     import * as THREE from "three";
     import ThreeGlobe from "three-globe";
+    import {TrackballControls} from "three/examples/jsm/controls/TrackballControls";
     export default {
         name: "Globe",
         mounted() {
             
             fetch('/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(countries =>
             {
-                console.log(ThreeGlobe);
               const Globe = new ThreeGlobe()
                 .polygonsData(countries.features.filter(d => d.properties.ISO_A2 !== 'AQ'))
                 .polygonSideColor(() => 'rgba(0, 200, 0, 0.1)')
@@ -44,17 +44,17 @@
             camera.position.z = 500;
         
             // Add camera controls
-            /* const tbControls = new TrackballControls(camera, renderer.domElement);
+            const tbControls = new TrackballControls(camera, renderer.domElement);
             tbControls.minDistance = 101;
             tbControls.rotateSpeed = 5;
             tbControls.zoomSpeed = 0.8;
             tbControls.noPan = true;
-            tbControls.noZoom = true; */
+            tbControls.noZoom = true;
         
             // Kick-off renderer
             (function animate() { // IIFE
                 // Frame cycle
-                // tbControls.update();
+                tbControls.update();
                 renderer.render(scene, camera);
                 requestAnimationFrame(animate);
             })();
