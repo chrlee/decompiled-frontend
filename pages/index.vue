@@ -11,8 +11,9 @@
                     &lt;meta charSet="utf-8"/&gt;
                     &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/&gt;
                     &lt;meta name="generator" content="Gatsby 2.21.1"/&gt;
-                    &lt;link rel="author" title="instagram" href="https://instagram.com/cjl.e/"/&gt;
-                    &lt;link rel="author" title="linkedin" href="https://linkedin.com/in/cjle"/&gt;
+                    <a href="https://instagram.com/cjl.e/">&lt;<span class="text-indigo-400">link</span> <span class="text-blue-400">rel</span>=<span class="text-red-500 opacity-70">"author"</span> <span class="text-blue-400">title</span>=<span class="text-red-500 opacity-70">"instagram"</span> <span class="text-blue-400">href</span>=<span class="text-red-500 opacity-70">"https://instagram.com/cjl.e/"</span>/&gt;</a>
+                    <br/>
+                    <a href="https://linkedin.com/in/cjle/">&lt;<span class="text-indigo-400">link</span> <span class="text-blue-400">rel</span>=<span class="text-red-500 opacity-70">"author"</span> <span class="text-blue-400">title</span>=<span class="text-red-500 opacity-70">"linkedin"</span> <span class="text-blue-400">href</span>=<span class="text-red-500 opacity-70">"https://linked.com/in/cjle/"</span>/&gt;</a>
                     &lt;link rel="alternate" type="application/rss+xml" href="/rss.xml"/&gt;
                     &lt;link rel="sitemap" type="application/xml" href="/sitemap.xml"/&gt;
                     &lt;link as="script" rel="preload" href="/webpack-runtime-1ff73fa22fa37b2d2a6e.js"/&gt;
@@ -30,15 +31,11 @@
                         <div class="ml-4">
                             <p>&lt;div class="navigation__header"&gt;</p>
                             <div class="ml-4">
-                                <p>&lt;div&gt;</p>
+                                <p>&lt;h2 class="navigation__header-title"&gt;</p>
                                 <div class="ml-4">
-                                    <p>&lt;h2 class="navigation__header-title"&gt;</p>
-                                    <div class="ml-4">
-                                        <p>&lt;a aria-current="page" class="navigation__header-title-link" href="/"&gt;Home&lt;/a&gt;</p> 
-                                    </div>
-                                    <p>&lt;/h2&gt;</p> 
+                                    <p>&lt;a aria-current="page" class="navigation__header-title-link" href="/"&gt;Home&lt;/a&gt;</p> 
                                 </div>
-                                <p>&lt;/div&gt;</p> 
+                                <p>&lt;/h2&gt;</p> 
                             </div>
                             <p>&lt;/div&gt;</p>
                             <p>&lt;nav class="menu"&gt;</p>
@@ -49,7 +46,7 @@
                                         <p>&lt;li class="menu__list-item"&gt;</p>
                                         <div v-if="page.attributes.external" class="ml-4">
                                             <a :href="page.attributes.href">
-                                                <p>&lt;<span class="text-indigo-400">a</span> <span class="text-blue-400">class</span>=<span class="text-yellow-500 opacity-70">"menu__list-item-link"</span> <span class="text-blue-400">href</span>=<span class="text-yellow-500 opacity-70">"{{ page.attributes.href }}"</span>&gt;</p>
+                                                <p>&lt;<span class="text-indigo-400">a</span> <span class="text-blue-400">class</span>=<span class="text-red-500 opacity-70">"menu__list-item-link"</span> <span class="text-blue-400">href</span>=<span class="text-red-500 opacity-70">"{{ page.attributes.href }}"</span>&gt;</p>
                                                 <div class="ml-4">
                                                     <p class="text-black">{{ page.attributes.Title }}</p>
                                                 </div>
@@ -58,7 +55,7 @@
                                         </div>
                                         <div v-else class="ml-4">
                                             <NuxtLink :to="page.attributes.href">
-                                                <p>&lt;<span class="text-indigo-400">a</span> <span class="text-blue-400">class</span>=<span class="text-yellow-500 opacity-70">"menu__list-item-link"</span> <span class="text-blue-400">href</span>=<span class="text-yellow-500 opacity-70">"{{ page.attributes.href }}"</span>&gt;</p>
+                                                <p>&lt;<span class="text-indigo-400">a</span> <span class="text-blue-400">class</span>=<span class="text-red-500 opacity-70">"menu__list-item-link"</span> <span class="text-blue-400">href</span>=<span class="text-red-500 opacity-70">"{{ page.attributes.href }}"</span>&gt;</p>
                                                 <div class="ml-4">
                                                     <p class="text-black">{{ page.attributes.Title }}</p>
                                                 </div>
@@ -117,21 +114,6 @@
     </transition-group>
     </client-only>
 </template>
-
-<!--
-<template>
-    <div>
-        <div v-if="error">
-            {{ error }}
-        </div>
-        <ul v-else>
-            <li v-for="page in pages" :key="page.id">
-                {{ page.attributes.Title }}
-            </li>
-        </ul>
-    </div>
-</template>
--->
 
 <script>
 export default {
