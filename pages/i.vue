@@ -16,7 +16,7 @@
             </ul>
         </div>
         <div class="overflow-hidden md:col-span-2 p-8 md:py-16">
-            <img class="object-contain object-top h-full w-full p-1.5" src="https://aimint.org/ap/wp-content/uploads/sites/18/2016/04/image-placeholder-vertical.jpg" />
+            <globe />
         </div>
     </div>
     </transition-group>
@@ -25,7 +25,8 @@
 
 <script>
 export default {
-    name: 'App',
+    name: 'ImageMap',
+    components: { Globe: () => {if(process.browser){return import("../notComponents/Globe.vue")}} },
     async asyncData (context) {
         const pageData = await context.$strapi.find('pages', { sort: 'id' });
         return {
