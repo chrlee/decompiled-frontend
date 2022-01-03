@@ -1,26 +1,5 @@
 <template>
-    <client-only>
-    <transition-group appear name="fade">
-    <div key="wrapper" class="grid grid-cols-1 md:grid-cols-3 md:h-screen whitespace-pre-line leading-tight inline-block">
-        <div class="pl-8 md:pl-16 pt-8 md:pt-16">
-            <h1 class="text-7xl md:text-5xl tracking-tighter">ㅈㅅ</h1>
-            <ul v-for="page in pages" :key="page.id">
-                <li class="text-gray-500 pl-2.5 md:pl-1.5">
-                    <a v-if="page.attributes.external" :href="page.attributes.href" target="_blank">
-                        {{ page.attributes.Title }}
-                    </a>
-                    <NuxtLink v-else :to="page.attributes.href">
-                        {{ page.attributes.Title }}
-                    </NuxtLink>
-                </li>
-            </ul>
-        </div>
-        <div class="overflow-hidden md:col-span-2 p-8 md:py-16">
-            <globe />
-        </div>
-    </div>
-    </transition-group>
-    </client-only>
+    <globe class="h-full w-full" />
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 /* eslint-disable vue/no-unused-components */
 <template>
-    <div id="globeViz" class="h-full w-full"></div>
+    <div id="globeViz"></div>
 </template>
 
 <script>
