@@ -6,18 +6,17 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import NavBar from './NavBar.vue';
+
 export default {
     name: 'Header',
     components: { NavBar },
-    data () {
-        return {
-            pages: []
+    computed: {
+        ...mapGetters(['getPages']),
+        pages() {
+            return this.getPages
         }
-    },
-    async fetch () {
-        const pageData = await this.$nuxt.context.$strapi.find('pages', { sort: 'id' });
-        this.pages = pageData.data;
-    },
+    } 
 }
 </script>
