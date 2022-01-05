@@ -9,10 +9,6 @@ export const state = () => ({
     },
 }
 
-  export const getters = {
-    getPages(state){ return state.pages }
-}
-
   export const actions = {
     async nuxtServerInit({ commit }, context) {
       const pageData = await context.$strapi.find('pages', { sort: 'id' });

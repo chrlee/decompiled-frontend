@@ -6,17 +6,14 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapState } from 'vuex';
 import NavBar from './NavBar.vue';
 
 export default {
     name: 'Header',
     components: { NavBar },
     computed: {
-        ...mapGetters(['getPages']),
-        pages() {
-            return this.getPages
-        }
+        ...mapState(['pages'])
     } 
 }
 </script>
