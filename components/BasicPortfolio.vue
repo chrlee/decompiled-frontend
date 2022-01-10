@@ -15,7 +15,7 @@ export default {
   name: 'PortfolioLayout',
   props: {
       items: {
-          type: Object,
+          type: Array,
           default: () => {},
           required: true
       }

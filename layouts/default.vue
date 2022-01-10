@@ -4,18 +4,16 @@
             <div key="wrapper" class="h-screen w-fit whitespace-pre-line leading-tight flex flex-col items-center justify-center">
                 <Header /> 
                 <Nuxt /> 
-                <Footer />
             </div>
         </transition-group>
     </client-only>
 </template>
 
 <script>
-import Footer from '~/components/Footer.vue'
 import Header from '~/components/Header.vue'
 export default {
     name: 'PageLayout',
-    components: { Header, Footer },
+    components: { Header },
 }
 </script>
 
