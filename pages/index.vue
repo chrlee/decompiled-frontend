@@ -1,6 +1,6 @@
 <template>
     <div class="overflow-hidden h-screen w-fit p-8">
-        <img class="object-contain object-top h-full w-full p-1.5" src="https://aimint.org/ap/wp-content/uploads/sites/18/2016/04/image-placeholder-vertical.jpg" />
+        <img class="object-contain object-top h-full w-full p-1.5" :src="image.url" />
     </div>
 </template>
 
@@ -8,14 +8,14 @@
 export default {
     name: 'App',
     async asyncData (context) {
-        const pageData = await context.$strapi.find('pages', { sort: 'id' });
+        const pageData = await context.$strapi.find('home-page', { populate: 'image' });
         return {
-            pages: pageData.data
+            image: pageData.data.attributes.image.data.attributes
         }
     },
     data () {
         return {
-            pages: []
+            image: {}
         }
     },
 }
