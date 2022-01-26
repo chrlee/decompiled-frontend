@@ -3,7 +3,9 @@
         <transition-group appear name="fade">
             <div key="wrapper" class="h-screen w-fit whitespace-pre-line leading-tight flex flex-col items-center justify-center">
                 <Header /> 
-                <Nuxt /> 
+                <div class="overflow-hidden h-screen w-fit p-8">
+                    <Nuxt />
+                </div>
             </div>
         </transition-group>
     </client-only>

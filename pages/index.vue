@@ -1,7 +1,5 @@
 <template>
-    <div class="overflow-hidden h-screen w-fit p-8">
-        <img class="object-contain object-top h-full w-full p-1.5" :src="image.url" />
-    </div>
+    <img class="object-contain object-top h-full w-full p-1.5" :src="image.url" />
 </template>
 
 <script>
