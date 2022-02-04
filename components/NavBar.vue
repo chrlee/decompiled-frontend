@@ -1,6 +1,6 @@
 <template>
-    <ul class="flex items-center justify-center leading-none">
-        <li v-for="page in pages" :key="page.id" class="text-gray-500 mx-2">
+    <ul class="flex flex-col items-left justify-left leading-none">
+        <li v-for="page in pages" :key="page.id" class="inline-flex my-0.5">
             <Link :external="page.attributes.external" :to="page.attributes.href">
                 <p>{{ page.attributes.Title }}</p>
             </Link>
@@ -9,16 +9,14 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 import Link from './Link.vue'
+
 export default {
     name: 'NavBar',
     components: { Link },
-    props: {
-      pages: {
-          type: Array,
-          default: () => {},
-          required: true
-      }
-    }
+    computed: {
+        ...mapState(['pages'])
+    } 
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <img class="object-contain object-top h-full w-full p-1.5" :src="image.url" />
+    <img class="object-contain object-top h-full w-full" :src="image.url" />
 </template>
 
 <script>
