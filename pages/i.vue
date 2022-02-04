@@ -1,5 +1,5 @@
 <template>
-    <globe class="h-full w-screen" />
+    <globe class="w-full h-full" />
 </template>
 
 <script>

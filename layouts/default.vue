@@ -1,15 +1,17 @@
 <template>
     <client-only>
         <transition-group appear name="fade">
-            <div key="wrapper" class="whitespace-pre-line leading-tight flex flex-col flex-auto items-center justify-center">
+            <div key="wrapper" class="whitespace-pre-line leading-tight flex flex-col items-center justify-center h-screen">
                 <Header /> 
-                <div class="flex">
-                    <div class="flex-none md:flex-1"></div>
-                    <div class="flex-1 overflow-hidden h-fit pl-1.5 md:pl-0">
-                        <Nuxt />
-                    </div>
-                    <div class="flex-none md:flex-1 px-1.5 md:pr-0">
-                        <NavBar />
+                <div class="flex-auto mb-5">
+                    <div class="flex flex-row h-full w-screen">
+                        <div class="flex-none md:flex-1"></div>
+                        <div class="flex-1 pl-1.5 md:pl-0">
+                            <Nuxt />
+                        </div>
+                        <div class="flex-none md:flex-1 px-1.5 md:pr-0">
+                            <NavBar />
+                        </div>
                     </div>
                 </div>
             </div>
