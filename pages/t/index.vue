@@ -8,7 +8,7 @@ export default {
     name: 'Tech',
     components: { BasicPortfolio },
     async asyncData (context) {
-        const pageData = await context.$strapi.find('tech-items', { sort: 'id' });
+        const pageData = await context.$strapi.find('tech-items', { sort: 'id:desc', populate: 'image' });
         return {
             pages: pageData.data
         }
