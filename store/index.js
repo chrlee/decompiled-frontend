@@ -11,7 +11,7 @@ export const state = () => ({
 
   export const actions = {
     async nuxtServerInit({ commit }, context) {
-      const pageData = await context.$strapi.find('pages', { sort: 'id' });
+      const pageData = await context.$strapi.find('pages', { sort: 'id', populate: '*' });
     commit('SET_PAGES', pageData.data)
   }
 }

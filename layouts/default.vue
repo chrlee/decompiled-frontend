@@ -6,7 +6,7 @@
                 <div class="flex-auto">
                     <div class="flex flex-row h-full w-screen">
                         <div class="flex-none md:flex-1 border-t border-black"></div>
-                        <div class="flex-1 p-1.5 md:p-3 border-r border-t border-black">
+                        <div class="flex-1 border-r border-t border-black">
                             <Nuxt />
                         </div>
                         <div class="flex-none md:flex-1 pr-1 lg:pr-0">

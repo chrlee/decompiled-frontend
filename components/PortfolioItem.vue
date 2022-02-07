@@ -1,5 +1,5 @@
 <template>
-  <Link :to="item.attributes.href">
+  <Link :to="item.attributes.link.href" :external="item.attributes.link.external">
     <div class="flex flex-col">
       <div class="flex-initial inline-flex">
         <img class="object-contain" :src="item.attributes.image.data.attributes.url" :srcset="`${item.attributes.image.data.attributes.formats.thumbnail.url} 234w, ${item.attributes.image.data.attributes.formats.small.url} 500w, ${item.attributes.image.data.attributes.formats.medium.url} 750w`" />

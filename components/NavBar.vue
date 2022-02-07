@@ -1,7 +1,7 @@
 <template>
     <ul class="flex flex-row inline-flex items-left justify-left leading-none w-fit pt-4 md:pt-8 md:pl-1 border-l border-black">
         <li v-for="page in pages" :key="page.id" class="text-sm md:text-base font-extralight m-0.5 md:m-1">
-            <Link :external="page.attributes.external" :to="page.attributes.href">
+            <Link :external="page.attributes.link.external" :to="page.attributes.link.href">
                 <p>{{ page.attributes.Title }}</p>
             </Link>
         </li>

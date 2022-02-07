@@ -5,10 +5,10 @@
 <script>
 import BasicPortfolio from '~/components/BasicPortfolio.vue'
 export default {
-    name: 'Tech',
+    name: 'Media',
     components: { BasicPortfolio },
     async asyncData (context) {
-        const pageData = await context.$strapi.find('tech-items', { sort: 'id:desc', populate: '*' });
+        const pageData = await context.$strapi.find('media-items', { sort: 'id:desc', populate: '*' });
         return {
             pages: pageData.data
         }
