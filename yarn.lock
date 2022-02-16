@@ -9206,10 +9206,10 @@ three-geojson-geometry@^1.1:
     d3-geo "1 - 3"
     earcut "2"
 
-three-globe@^2.21.4:
-  version "2.21.4"
-  resolved "https://registry.yarnpkg.com/three-globe/-/three-globe-2.21.4.tgz#692676b4ff9bd4d7676e84897542b1aa238f0443"
-  integrity sha512-mLSe8oY+gx+bDSqg+ExWrRWPm9EQ4sGzT7Z8h0Sa2Hk1mflD7FvCJrrFdYn82awJOn06DZPNl/dd6ipNqRmnHA==
+three-globe@^2.21.7:
+  version "2.21.7"
+  resolved "https://registry.yarnpkg.com/three-globe/-/three-globe-2.21.7.tgz#5d3a8a5ec812c4e434d84d3cced18ddcd204454f"
+  integrity sha512-LncWft3HLurRw7yYaU4CVB5LJ9fHdLESimoeU3sZMTk17lx/qd45/+eT0/CczMEe7LbbDF2WiNnqEZktqPGW5g==
   dependencies:
     "@tweenjs/tween.js" "18"
     accessor-fn "1"
