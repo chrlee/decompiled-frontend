@@ -5,8 +5,8 @@
                 <NavBar /> 
                 <div class="flex-auto">
                     <div class="flex flex-row h-full w-screen">
-                        <div class="flex-none md:flex-1 border-t border-black"></div>
-                        <div class="flex-1 border-r border-t border-black">
+                        <div class="flex-none md:flex-1"></div>
+                        <div class="flex-1">
                             <Nuxt />
                         </div>
                         <div class="flex-none md:flex-1 pr-1 lg:pr-0">
