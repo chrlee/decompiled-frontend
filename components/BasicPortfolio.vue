@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ul class="grid grid-flow-col grid-cols-2 md:grid-cols-3 h-full w-full">
+        <ul class="grid grid-flow-row grid-cols-2 md:grid-cols-3 h-full w-full">
             <li v-for="item in items" :key="item.id" class="font-extralight pl-2.5 md:pl-1.5">
                 <PortfolioItem :item="item" />
             </li>
