@@ -17,7 +17,19 @@
                 .polygonsData(countries.features.filter(d => d.properties.ISO_A2 !== 'AQ'))
                 .polygonSideColor(() => 'rgba(0, 200, 0, 0.1)')
                 .polygonStrokeColor(() => '#059669')
-                .polygonCapMaterial(() => new THREE.MeshPhongMaterial({wireframe: false, color: '#059669'}));
+                .polygonCapMaterial(() => new THREE.MeshPhongMaterial({wireframe: false, color: '#059669'}))
+                .labelsData([{
+                    lat: 40.7128,
+                    lng: -74.0060,
+                    text: "One Management",
+                    color: "black",
+                    altitude: 0.1
+                }])
+                .labelText('text')
+                .labelColor('color')
+                .labelAltitude('altitude')
+                .labelSize(2)
+                .labelDotRadius(0.5);
 
             const globeMaterial = Globe.globeMaterial();
             globeMaterial.color = new THREE.Color( 0xffffff );
